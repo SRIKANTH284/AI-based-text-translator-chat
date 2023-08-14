@@ -9,7 +9,7 @@ if "target_language" not in st.session_state:
     st.session_state.target_language = "French"
 
 with st.sidebar:
-    st.title('🤖💬 OpenAI Translator')
+    st.title('🤖💬 OpenAI Translator..')
     if 'OPENAI_API_KEY' in st.secrets:
         st.success('API key already provided!', icon='✅')
         openai.api_key = st.secrets['OPENAI_API_KEY']
