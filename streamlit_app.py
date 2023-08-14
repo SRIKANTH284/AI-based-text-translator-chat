@@ -1,6 +1,9 @@
 import openai
 import streamlit as st
 
+# Set page configuration
+st.set_page_config(page_title="Falcon LLM")
+
 # Initialize target_language if not present in session_state
 if "target_language" not in st.session_state:
     st.session_state.target_language = "French"
@@ -52,3 +55,7 @@ target_language_index = target_language_options.index(st.session_state.target_la
 target_language = st.selectbox('Select Target Language', target_language_options, index=target_language_index)
 
 st.session_state.target_language = target_language
+
+# Use this block to include the style.css
+with open("style.css") as source_des:
+    st.markdown(f"<style>{source_des.read()}</style>", unsafe_allow_html=True)
