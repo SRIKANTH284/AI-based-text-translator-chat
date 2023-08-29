@@ -56,6 +56,5 @@ target_language = st.selectbox('Select Target Language', target_language_options
 
 st.session_state.target_language = target_language
 
-# Use this block to include the style.css
-with open("style.css") as source_des:
-    st.markdown(f"<style>{source_des.read()}</style>", unsafe_allow_html=True)
+
+
