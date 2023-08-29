@@ -9,6 +9,8 @@ if "target_language" not in st.session_state:
     st.session_state.target_language = "French"
 
 with st.sidebar:
+    # Display the image as the title
+    st.image("logo.png", use_column_width=True)
     st.title('🤖💬 OpenAI Translator..')
     if 'OPENAI_API_KEY' in st.secrets:
         st.success('API key already provided!', icon='✅')
@@ -48,13 +50,10 @@ if prompt := st.chat_input("Enter text to translate:"):
         st.markdown(translation)
 
 # Convert target_language to its corresponding index
-target_language_options = ['French', 'Spanish', 'German', 'Italian','Telugu','Hindi']
+target_language_options = ['French', 'Spanish', 'German', 'Italian', 'Telugu', 'Hindi']
 target_language_index = target_language_options.index(st.session_state.target_language)
 
 # Use the correct index for selectbox
 target_language = st.selectbox('Select Target Language', target_language_options, index=target_language_index)
 
 st.session_state.target_language = target_language
-
-
-
