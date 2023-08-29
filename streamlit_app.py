@@ -2,7 +2,7 @@ import openai
 import streamlit as st
 
 # Set page configuration
-st.set_page_config(page_title="Falcon LLM")
+st.set_page_config(page_title="OpenAI Translator")
 
 # Initialize target_language if not present in session_state
 if "target_language" not in st.session_state:
